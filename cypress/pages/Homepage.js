@@ -6,6 +6,7 @@ class HomePage
     btnProduct = "//a[contains(text(),'Products')]";
     btnCart = "//a[contains(text(),'Cart')]";
     btnSignInLogIn = "//a[contains(text(),'Signup / Login')]";
+    btnContactUs ="//a[contains(text(),'Contact us')]"
     imgHomePage = "img[alt='Website for automation practice']";
     countNoOfBtn = 'ul.nav.navbar-nav a';
 
@@ -13,6 +14,10 @@ class HomePage
       cy.visit(this.url);
     }
   
+    clickContactUs(){
+      cy.xpath(this.btnContactUs).click()
+    }
+
     clickHome() {
       cy.xpath(this.btnHome).click();
     }
